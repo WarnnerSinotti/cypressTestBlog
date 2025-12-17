@@ -1,0 +1,31 @@
+name: Testes de E2E Cypress
+
+on:
+    workflow_dispatch:
+
+jobs:
+    cypress-run:
+        runs-on: ubuntu-22.04
+
+        env:
+            CYPRESS_BASE_URL: ${{ secrets.CYPRESS_BASE_URL }}
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Instalar dependências
+              run: npm ci --legacy-peer-deps
+
+            - name: Testes E2E - Cypress
+              uses: cypress-io/github-action@v6
+              with:
+                  browser: chrome
+                  command: npm run cypress:e2e-all
+
+            - name: Salvar screenshots
+              uses: actions/upload-artifact@v4
+              if: failure()
+              with:
+                  name: Screenshot error cypress test
+                  path: cypress/screenshots

@@ -1,0 +1,55 @@
+{
+    "name": "cypress_test_blog",
+    "version": "1.0.0",
+    "description": "Aplicação de Testes Automatizados E2E e API",
+    "main": "index.js",
+    "scripts": {
+        "lint": "npx eslint . --ext .ts",
+        "lint:fix": "npx eslint --fix .",
+        "cyDev": "npx cypress open",
+        "cyDevRun:e2e": "npx cypress run --spec  'cypress/e2e/web/**/*.spec.ts'",
+        "cyDevRun:api": "npx cypress run --spec  'cypress/e2e/api/**/*.spec.ts'",
+        "reporter:tests": "npx ts-node scriptMapeamentoTestes.ts",
+        "prepare": "husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WarnnerSinotti/cypressTestBlog"
+    },
+    "keywords": [],
+    "author": "Weg",
+    "license": "ISC",
+    "dependencies": {
+        "eslint": "^8.57.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
+        "@commitlint/types": "^19.8.1",
+        "@faker-js/faker": "^8.3.1",
+        "@types/node": "^20.10.8",
+        "@typescript-eslint/eslint-plugin": "^8.30.1",
+        "@typescript-eslint/parser": "^8.30.1",
+        "cypress": "^15.0.0",
+        "cypress-file-upload": "^5.0.8",
+        "cypress-plugin-api": "^2.11.1",
+        "cypress-plugin-xhr-toggle": "^1.0.0",
+        "cypress-real-events": "^1.13.0",
+        "dotenv": "^16.4.5",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^4.3.2",
+        "eslint-plugin-cypress": "^2.15.2",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-promise": "^6.6.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "eslint-plugin-sonarjs": "^0.23.0",
+        "eslint-plugin-sort-class-members": "^1.20.0",
+        "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+        "eslint-plugin-you-dont-need-lodash-underscore": "^6.13.0",
+        "husky": "^9.1.7",
+        "prettier": "^3.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.3.3"
+    }
+}

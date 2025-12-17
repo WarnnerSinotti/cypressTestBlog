@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["es5", "dom"],
+        "strict": true,
+        "module": "commonjs",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "cypress/*": ["cypress/*"]
+        },
+        "types": ["cypress", "node", "cypress-file-upload", "cypress-real-events", "cypress-plugin-api", "cypress-wait-until"],
+        "baseUrl": "."
+    },
+    "include": ["cypress/**/*.ts", "scriptMapeamentoTestes.ts", "commitlint.config.ts"],
+    "exclude": ["cypress.config.ts", "node_modules", "cypress-real-events"]
+}
