@@ -1,4 +1,4 @@
-name: Testes E2E Cypress (Docker)
+name: Testes E2E Cypress
 
 on:
     workflow_dispatch:
@@ -8,7 +8,7 @@ on:
         branches: [main]
 
 jobs:
-    e2e-docker:
+    e2e:
         runs-on: ubuntu-22.04
 
         env:
@@ -18,20 +18,19 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Subir ambiente E2E (Docker Compose)
-              run: docker compose -f docker-compose-e2e.yml up -d
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+                  cache: npm
 
-            - name: Aguardar serviços ficarem prontos
-              run: sleep 20
+            - name: Instalar dependências
+              run: npm ci
 
-            - name: Rodar testes E2E
-              run: docker compose -f docker-compose-e2e.yml up --exit-code-from cypress_test_blog_e2e
+            - name: Rodar testes E2E (Cypress)
+              run: npm run cyDevRun:e2e
 
-            - name: Derrubar containers
-              if: always()
-              run: docker compose -f docker-compose-e2e.yml down
-
-            - name: Salvar screenshots
+            - name: Salvar screenshots (falha)
               if: failure()
               uses: actions/upload-artifact@v4
               with:
