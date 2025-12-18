@@ -1,11 +1,11 @@
 import { accessHomePage } from './commands';
 
-//Plugins and External API
+// Commands WEB
 Cypress.Commands.add('accessHomePage', accessHomePage);
+
+//Plugins and External API
 
 //Ignorar error
 Cypress.on('uncaught:exception', (err, runnable) => {
-    // returning false here prevents Cypress from
-    // failing the test
     return false;
 });
