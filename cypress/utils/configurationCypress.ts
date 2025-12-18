@@ -5,7 +5,7 @@ export const api = {
 
 export const time = {
     milliseconds: 500,
-    twoSecond: 2000,
+    threeSeconds: 3000,
 };
 
 export const sizesMobile = [[390, 844]];

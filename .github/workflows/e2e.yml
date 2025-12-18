@@ -26,9 +26,6 @@ jobs:
             - name: Instalar dependências
               run: npm install
 
-            - name: Debug baseUrl
-              run: echo "CYPRESS_BASE_URL=$CYPRESS_BASE_URL"
-
             - name: Rodar testes E2E
               run: npm run cyDevRun:e2e
 
