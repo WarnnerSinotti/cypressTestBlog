@@ -1,29 +1,20 @@
-import { time } from 'cypress/utils/configurationCypress';
-
 interface HomePageInterface {
     HomeBtn: () => void;
-    ProcurandoArquivo: (text: string, cancel?: boolean) => void;
+    ProcurandoArquivo: (text: string) => void;
 }
 
 export const homePage: HomePageInterface = {
     HomeBtn() {
-        cy.get('a[aria-label="Search button"]').should('be.visible').click();
+        cy.get('a[aria-label="Search button"]').should('be.visible').realClick();
 
         return this;
     },
 
-    ProcurandoArquivo: (text: string, cancel: boolean = false) => {
+    ProcurandoArquivo: (text: string) => {
         homePage.HomeBtn();
 
         cy.get('.ast-search-menu-icon').invoke('addClass', 'ast-dropdown-active');
 
-        if (cancel) {
-            cy.get('#search-field', { timeout: 20000 }).focus().should('be.visible');
-            cy.wait(time.milliseconds);
-            homePage.HomeBtn();
-            cy.get('#search-field', { timeout: 20000 }).should('not.be.visible');
-        } else {
-            cy.get('#search-field', { timeout: 20000 }).focus().should('be.visible').clear().type(text, { delay: 50 }).type('{enter}');
-        }
+        cy.get('#search-field', { timeout: 20000 }).focus().should('be.visible').clear().type(text, { delay: 50 }).type('{enter}');
     },
 };

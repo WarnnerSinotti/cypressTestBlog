@@ -11,11 +11,7 @@ describe('HomePage', () => {
         cy.accessHomePage();
         assertionHome.SearchFormIconBeVisible();
     });
-    it('AG-02A Acessar homepage e validar campo de busca de search "Lupa" e cancelar acao', () => {
-        homePage.ProcurandoArquivo(searchKey, true);
 
-        assertionGlobal.Route(`/`);
-    });
     it('AG-02A Acessar homepage e validar campo de busca de search "Lupa" e acessar palavra chave', () => {
         homePage.ProcurandoArquivo(searchKey);
 

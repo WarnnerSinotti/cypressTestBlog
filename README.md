@@ -42,12 +42,9 @@ Este Projeto é destinado para Testes Automatizados de E2E e API com Cypress em 
 
 Para rodar os testes do cypress, podemos utilizar duas formas:
 
-- Docker compose
 - Rodar cypress local
-
-### Rodar Testes com Docker
-
-    - Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
+- Pipeline github actions
+- Docker compose
 
 ### Rodar Testes com Cypress Localmente
 
@@ -59,6 +56,14 @@ Valide se instalou todas os recursos necessários, lembre-se para máquinas mac 
 - Todos os testes E2E em modo headlesss `npm run cypress:e2e-all`
 
 Obs: modo headless ocorre que os testes são executados no terminal sem a visualização gráfica do cypress
+
+### Rodar Testes com Pipeline Github Actions
+
+    - Para rodar os testes em pipeline do github basta acessar [Github Actions](https://github.com/WarnnerSinotti/cypressTestBlog/actions) e clicar em Testes E2E Cypress
+
+### Rodar Testes com Docker
+
+    - Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
 
 # EXTRAS
 
