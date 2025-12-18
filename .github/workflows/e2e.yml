@@ -1,10 +1,14 @@
-name: Testes de E2E Cypress
+name: Testes E2E Cypress (Docker)
 
 on:
     workflow_dispatch:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
 
 jobs:
-    cypress-run:
+    e2e-docker:
         runs-on: ubuntu-22.04
 
         env:
@@ -14,18 +18,22 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Instalar dependências
-              run: npm ci --legacy-peer-deps
+            - name: Subir ambiente E2E (Docker Compose)
+              run: docker compose -f docker-compose-e2e.yml up -d
 
-            - name: Testes E2E - Cypress
-              uses: cypress-io/github-action@v6
-              with:
-                  browser: chrome
-                  command: npm run cypress:e2e-all
+            - name: Aguardar serviços ficarem prontos
+              run: sleep 20
+
+            - name: Rodar testes E2E
+              run: docker compose -f docker-compose-e2e.yml logs cypress
+
+            - name: Derrubar containers
+              if: always()
+              run: docker compose -f docker-compose-e2e.yml down
 
             - name: Salvar screenshots
-              uses: actions/upload-artifact@v4
               if: failure()
+              uses: actions/upload-artifact@v4
               with:
-                  name: Screenshot error cypress test
+                  name: cypress-screenshots
                   path: cypress/screenshots
