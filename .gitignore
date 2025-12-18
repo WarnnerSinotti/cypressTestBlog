@@ -22,4 +22,6 @@
 allure-results
 allure-report
 
-#
+#code-coverage
+.nyc_output
+coverage

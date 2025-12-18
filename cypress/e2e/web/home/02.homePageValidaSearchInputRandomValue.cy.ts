@@ -13,9 +13,12 @@ describe('HomePage', () => {
     });
     it('AG-02A Acessar homepage e validar campo de busca de search "Lupa" e cancelar acao', () => {
         homePage.ProcurandoArquivo(searchKey, true);
+
+        assertionGlobal.Route(`/`);
     });
     it('AG-02A Acessar homepage e validar campo de busca de search "Lupa" e acessar palavra chave', () => {
         homePage.ProcurandoArquivo(searchKey);
+
         assertionGlobal.Route(`/?s=${searchKey}`);
         assertionHome.Title(`${textStaticHomePage.blog.result}${searchKey}`, 'h1');
     });

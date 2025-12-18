@@ -3,3 +3,5 @@ dist
 cypress/support/index.ts
 cypress.config.ts
 commitlint.config.ts
+scriptGerarRelatorioCobertura.ts
+scriptVisualizarCobertura.ts

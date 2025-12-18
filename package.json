@@ -7,9 +7,11 @@
         "lint": "npx eslint . --ext .ts",
         "lint:fix": "npx eslint --fix .",
         "cyDev": "npx cypress open",
-        "cyDevRun:e2e": "npx cypress run --spec  'cypress/e2e/web/**/*.spec.ts'",
-        "cyDevRun:api": "npx cypress run --spec  'cypress/e2e/api/**/*.spec.ts'",
+        "cyDevRun:tests": "npx cypress run --spec  'cypress/e2e/web/home/02.homePageValidaSearchInputRandomValue.cy.ts'",
+        "cyDevRun:e2e": "npx cypress run --spec  'cypress/e2e/web/**/*.cy.ts'",
+        "cyDevRun:api": "npx cypress run --spec  'cypress/e2e/api/**/*.cy.ts'",
         "reporter:tests": "npx ts-node scriptMapeamentoTestes.ts",
+        "coverage:open": "npx ts-node scriptGerarRelatorioCobertura.ts && start coverage/index.html",
         "prepare": "husky"
     },
     "repository": {
@@ -17,7 +19,7 @@
         "url": "https://github.com/WarnnerSinotti/cypressTestBlog"
     },
     "keywords": [],
-    "author": "Weg",
+    "author": "Warnner",
     "license": "ISC",
     "dependencies": {
         "eslint": "^8.57.1"
@@ -27,11 +29,12 @@
         "@commitlint/config-conventional": "^19.8.1",
         "@commitlint/types": "^19.8.1",
         "@faker-js/faker": "^8.3.1",
+        "@types/fs-extra": "^11.0.4",
         "@types/node": "^20.10.8",
         "@typescript-eslint/eslint-plugin": "^8.30.1",
         "@typescript-eslint/parser": "^8.30.1",
+        "@cypress/code-coverage": "^3.14.7",
         "cypress": "^15.0.0",
-        "cypress-file-upload": "^5.0.8",
         "cypress-plugin-api": "^2.11.1",
         "cypress-plugin-xhr-toggle": "^1.0.0",
         "cypress-real-events": "^1.13.0",
@@ -50,6 +53,7 @@
         "husky": "^9.1.7",
         "prettier": "^3.1.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.3.3"
+        "typescript": "^5.3.3",
+        "nyc": "^17.1.0"
     }
 }

@@ -1,6 +1,6 @@
 import './commands';
+import './index';
 import 'cypress-plugin-xhr-toggle';
 import 'cypress-plugin-api';
-import 'cypress-file-upload';
 import 'cypress-real-events/support';
-import './index';
+import '@cypress/code-coverage/support';

@@ -1,3 +1,5 @@
+import { time } from 'cypress/utils/configurationCypress';
+
 declare global {
     namespace Cypress {
         interface Chainable {
@@ -11,5 +13,7 @@ export const accessHomePage = () => {
 
     cy.visit('/');
 
+    cy.wait(time.twoSecond);
+    cy.get('[data-ast-blocks-layout="true"]').should('be.visible');
     cy.wait('@clarityCollect').its('response.statusCode').should('eq', 204);
 };

@@ -1,4 +1,4 @@
-name: Lexio - Validando Eslint Cypress
+name: Validando Eslint Cypress
 
 on:
     pull_request:

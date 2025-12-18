@@ -12,7 +12,7 @@
         "paths": {
             "cypress/*": ["cypress/*"]
         },
-        "types": ["cypress", "node", "cypress-file-upload", "cypress-real-events", "cypress-plugin-api", "cypress-wait-until"],
+        "types": ["cypress", "node", "cypress-real-events", "cypress-plugin-api"],
         "baseUrl": "."
     },
     "include": ["cypress/**/*.ts", "scriptMapeamentoTestes.ts", "commitlint.config.ts"],

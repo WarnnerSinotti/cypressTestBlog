@@ -15,16 +15,15 @@ export const homePage: HomePageInterface = {
     ProcurandoArquivo: (text: string, cancel: boolean = false) => {
         homePage.HomeBtn();
 
-        // Garante que o search esteja aberto
         cy.get('.ast-search-menu-icon').invoke('addClass', 'ast-dropdown-active');
 
         if (cancel) {
-            cy.get('#search-field').focus().should('be.visible');
+            cy.get('#search-field', { timeout: 20000 }).focus().should('be.visible');
             cy.wait(time.milliseconds);
             homePage.HomeBtn();
-            cy.get('#search-field').should('not.be.visible');
+            cy.get('#search-field', { timeout: 20000 }).should('not.be.visible');
         } else {
-            cy.get('#search-field').focus().should('be.visible').clear().type(text, { delay: 50 }).type('{enter}');
+            cy.get('#search-field', { timeout: 20000 }).focus().should('be.visible').clear().type(text, { delay: 50 }).type('{enter}');
         }
     },
 };

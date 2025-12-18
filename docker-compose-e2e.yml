@@ -1,0 +1,10 @@
+services:
+    cypress_test_blog_e2e:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - .:/app
+        env_file:
+            - .env
+        command: ['npm', 'run', 'cyDevRun:e2e']
