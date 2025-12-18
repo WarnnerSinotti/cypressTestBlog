@@ -25,7 +25,7 @@ jobs:
                   cache: npm
 
             - name: Instalar dependências
-              run: npm ci
+              run: npm i
 
             - name: Rodar testes E2E (Cypress)
               run: npm run cyDevRun:e2e
