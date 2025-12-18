@@ -47,7 +47,7 @@ Para rodar os testes do cypress, podemos utilizar duas formas:
 
 ### Rodar Testes com Docker
 
-- Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
+    - Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
 
 ### Rodar Testes com Cypress Localmente
 
