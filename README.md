@@ -17,6 +17,7 @@ Este Projeto é destinado para Testes Automatizados de E2E e API com Cypress em 
 - Docker
 - Workflow github
 - Husky
+- Code Coverage
 
 # INSTALAÇÃO
 
@@ -59,11 +60,11 @@ Obs: modo headless ocorre que os testes são executados no terminal sem a visual
 
 ### Rodar Testes com Pipeline Github Actions
 
-    - Para rodar os testes em pipeline do github basta acessar [Github Actions](https://github.com/WarnnerSinotti/cypressTestBlog/actions) e clicar em Testes E2E Cypress
+- Para rodar os testes em pipeline do github basta acessar [Github Actions](https://github.com/WarnnerSinotti/cypressTestBlog/actions) e clicar em Testes E2E Cypress
 
 ### Rodar Testes com Docker
 
-    - Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
+- Testes E2E Rode no terminal `docker compose -f docker-compose-e2e.yml up`
 
 # EXTRAS
 

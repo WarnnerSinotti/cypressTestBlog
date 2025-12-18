@@ -13,5 +13,6 @@ describe('HomePage', () => {
         homePage.ProcurandoArquivo(absoluteValue);
 
         assertionGlobal.Route(`/?s=${absoluteValue}`);
+        assertionHome.PostContain();
     });
 });
