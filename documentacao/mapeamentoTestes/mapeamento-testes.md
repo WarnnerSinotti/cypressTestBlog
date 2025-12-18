@@ -10,12 +10,12 @@
 <details>
 <summary>📂 home (3)</summary>
 
-#### Teste: [01.homePageValidaUrl.cy.ts](cypress/e2e/web/home/01.homePageValidaUrl.cy.ts)
+#### Teste: [01.homePageValidaUrl.cy.ts](../../cypress/e2e/web/home/01.homePageValidaUrl.cy.ts)
 - AG-01A Acessar homepage e validar url
 - AG-01B Acessar homepage e validar button de search "Lupa"
-#### Teste: [02.homePageValidaSearchInputRandomValue.cy.ts](cypress/e2e/web/home/02.homePageValidaSearchInputRandomValue.cy.ts)
+#### Teste: [02.homePageValidaSearchInputRandomValue.cy.ts](../../cypress/e2e/web/home/02.homePageValidaSearchInputRandomValue.cy.ts)
 - AG-02A Acessar homepage e validar campo de busca de search "Lupa" e acessar palavra chave
-#### Teste: [03.homePageValidaSearchInputAbsoluteValue.cy.ts](cypress/e2e/web/home/03.homePageValidaSearchInputAbsoluteValue.cy.ts)
+#### Teste: [03.homePageValidaSearchInputAbsoluteValue.cy.ts](../../cypress/e2e/web/home/03.homePageValidaSearchInputAbsoluteValue.cy.ts)
 - AG-03A Acessar homepage e validar campo de busca de search "Lupa" e com palavra chave
 </details>
 
@@ -33,4 +33,3 @@
 | Pasta | Quantidade de Testes |
 | ----- | ------------------- |
 | home | 4 |
-
