@@ -25,7 +25,7 @@ jobs:
               run: sleep 20
 
             - name: Rodar testes E2E
-              run: docker compose -f docker-compose-e2e.yml logs cypress
+              run: docker compose -f docker-compose-e2e.yml up --exit-code-from cypress_test_blog_e2e
 
             - name: Derrubar containers
               if: always()
