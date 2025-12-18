@@ -2,7 +2,7 @@
 
 Este Projeto é destinado para Testes Automatizados de E2E e API com Cypress em projeto test Cypress End-to-End Tests for the Blog.
 
-## Liguagem de Programação
+## Linguagem de Programação
 
 - Typescript
 
@@ -25,7 +25,7 @@ Este Projeto é destinado para Testes Automatizados de E2E e API com Cypress em 
 
 - Instalar nvm (node version manager)
 - Instalar node v20.x.x
-- For Linux ou Mac (Dependencias de sistema para cypress) -> [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+- For Linux ou Mac (Dependências de sistema para cypress) -> [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
 
 ## Instalando Cypress
 
@@ -54,13 +54,13 @@ Valide se instalou todas os recursos necessários, lembre-se para máquinas mac 
 <b>Após as instalações necessárias, podemos seguir com os seguintes steps de testes:</b>
 
 - Rodar testes em modo CLI (Visualização Gráfica) `npm run cypress:open`
-- Todos os testes E2E em modo headlesss `npm run cypress:e2e-all`
+- Todos os testes E2E em modo headless `npm run cypress:e2e-all`
 
 Obs: modo headless ocorre que os testes são executados no terminal sem a visualização gráfica do cypress
 
 ### Rodar Testes com Pipeline Github Actions
 
-- Para rodar os testes em pipeline do github basta acessar [Github Actions](https://github.com/WarnnerSinotti/cypressTestBlog/actions) e clicar em Testes E2E Cypress
+- Para rodar os testes em pipeline do github basta acessar [Github Actions](https://github.com/WarnnerSinotti/cypressTestBlog/actions) e clicar em Testes E2E Cypress e após `Run workflow`
 
 ### Rodar Testes com Docker
 
@@ -79,7 +79,7 @@ Após rodar, acessar o arquivo mapeamento-testes [Mapeamento de Testes](document
 
 ## Code Coverage
 
-Caso aplicação web/app estiver configurado para fornecer informação para code coverage do cypress, basta rodas os testes e após os testes rodar o seguinte comando:
+Caso aplicação web/app estiver configurado para fornecer informação para code coverage do cypress, basta rodar os testes e após os testes rodar o seguinte comando:
 
 - `npm run coverage:open`
 
